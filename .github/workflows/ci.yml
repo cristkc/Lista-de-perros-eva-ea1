@@ -1,0 +1,31 @@
+name: Validacion de aplicacion web
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validar-frontend:
+    name: Validar archivos y JavaScript
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo del repositorio
+        uses: actions/checkout@v4
+
+      - name: Verificar archivos principales
+        run: |
+          test -f index.html
+          test -f index.js
+          test -f style.css
+          echo "Los archivos principales existen."
+
+      - name: Validar sintaxis de JavaScript
+        run: node --check index.js
