@@ -82,3 +82,11 @@ button:hover {
 .escondido {
   display: none;
 }
+
+#razaActual {
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1f4f70;
+  margin: 10px 0;
+}
