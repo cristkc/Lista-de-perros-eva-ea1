@@ -30,6 +30,12 @@ perroActualElement.addEventListener("load", () => {
   spinner.classList.toggle("escondido", true);
   perroActualElement.classList.toggle("escondido", false);
 });
+perroActualElement.addEventListener("error", () => {
+  spinner.classList.toggle("escondido", true);
+  perroActualElement.classList.toggle("escondido", true);
+  razaActualElement.textContent =
+    "No se pudo cargar la imagen. Intenta nuevamente.";
+});
 
 function rankearPerro(ranking) {
   const nuevaImagen = document.createElement("img");
