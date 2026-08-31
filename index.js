@@ -1,6 +1,8 @@
 const perroActualElement = document.getElementById("perroActual");
 const razaActualElement = document.getElementById("razaActual");
 const spinner = document.getElementById("spinner");
+const contadorLikesElement = document.getElementById("contadorLikes");
+const contadorDislikesElement = document.getElementById("contadorDislikes");
 
 const perrosLikeContainer = document.getElementById("perrosLikeContainer");
 const perrosDislikeContainer = document.getElementById(
@@ -11,6 +13,8 @@ perrosLikeContainer.classList.toggle("escondido");
 perrosDislikeContainer.classList.toggle("escondido");
 
 let perroActual;
+let cantidadLikes = 0;
+let cantidadDislikes = 0;
 
 document.getElementById("like").addEventListener("click", () => {
   rankearPerro("+");
@@ -33,9 +37,15 @@ function rankearPerro(ranking) {
   nuevaImagen.alt = "Perro calificado";
 
   if (ranking === "+") {
+    cantidadLikes++;
+    contadorLikesElement.textContent = cantidadLikes;
+
     perrosLikeContainer.appendChild(nuevaImagen);
     perrosLikeContainer.classList.toggle("escondido", false);
   } else {
+    cantidadDislikes++;
+    contadorDislikesElement.textContent = cantidadDislikes;
+
     perrosDislikeContainer.appendChild(nuevaImagen);
     perrosDislikeContainer.classList.toggle("escondido", false);
   }
