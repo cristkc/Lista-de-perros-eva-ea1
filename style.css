@@ -82,3 +82,27 @@ button:hover {
 .escondido {
   display: none;
 }
+
+#razaActual {
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1f4f70;
+  margin: 10px 0;
+}
+
+.contadores {
+  display: flex;
+  gap: 20px;
+  margin: 10px 0;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.contadores p {
+  margin: 0;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+}

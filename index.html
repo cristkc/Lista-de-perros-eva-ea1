@@ -10,6 +10,7 @@
   </head>
   <body>
     <h1>¿Te gusta este perro?</h1>
+    <p id="razaActual">Raza: cargando...</p>
     <div id="fotoPrincipalContainer">
         <div class="loader" id="spinner"></div>
         <img src="" alt="Perrito lindo" id="perroActual" />
@@ -18,6 +19,10 @@
       <button id="like">👍🏻</button>
       <button id="saltear">Saltear</button>
       <button id="dislike">👎🏻</button>
+    </div>
+    <div class="contadores">
+      <p>👍 Me gusta: <span id="contadorLikes">0</span></p>
+      <p>👎 No me gusta: <span id="contadorDislikes">0</span></p>
     </div>
     <div class="perrosContainer" id="perrosLikeContainer"></div>
     <div class="perrosContainer" id="perrosDislikeContainer"></div>
